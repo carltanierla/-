@@ -1,0 +1,97 @@
+  $nav-text-color: #DDDDDD;
+
+  
+  #nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333333;
+  }
+
+  #logo { 
+    flex: 1.5;
+    align-self: center;
+  }
+  
+  #nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+  }
+
+  #nav ul li a, .settings a {
+    display: inline-block;
+    color: $nav-text-color;
+    text-align: center;
+    margin: 0.5rem 1rem;
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+
+  .menu {
+    flex: 5;
+  }
+  
+  .horizontal {
+    display: flex;
+  }
+
+  .logo {
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  .logo.vue:hover, #nav ul li a:hover {
+    filter: drop-shadow(1rem 0 3rem #42b883);
+  }
+  
+  .fa-caret-down, .fa-magnifying-glass, .fa-bell{
+    cursor: pointer;
+  }
+
+  .fa-magnifying-glass, .fa-bell {
+    color: #919599
+  }
+
+  .fa-caret-down {
+    color: $nav-text-color;
+  }
+
+  .right-nav {
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile {
+    flex: 0.5;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .search-field {
+    flex: 0.5;
+  }
+
+  .search-input {
+    color: #919599;
+  }
+
+  .v-field__input {
+    text-align: center;
+  }
+
+  .v-field__outline {
+    color: #919599;
+  }
+
+  .v-input {
+    max-width: 200px !important;
+  }
