@@ -1,5 +1,10 @@
-  $nav-text-color: #DDDDDD;
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
+$nav-text-color: #DDDDDD;
+
+  body {
+    font-family: 'Rubik', arial;
+  }
   
   #nav {
     padding: 0;
