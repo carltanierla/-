@@ -32,6 +32,9 @@ library.add(
     faUser
 )
 
+/**
+ * vuetify instantiation
+ */
 const vuetify = createVuetify({
     components,
     directives,

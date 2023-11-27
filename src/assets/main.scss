@@ -3,7 +3,7 @@
 $nav-text-color: #DDDDDD;
 
   body {
-    font-family: 'Rubik', arial;
+    font-family: 'Rubik', arial !important;
   }
   
   #nav {
@@ -24,7 +24,7 @@ $nav-text-color: #DDDDDD;
     padding: 0;
   }
 
-  #nav ul li {
+  #nav ul li, .settings {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,10 +38,6 @@ $nav-text-color: #DDDDDD;
     margin: 0.5rem 1rem;
     padding: 1rem 0;
     text-decoration: none;
-  }
-
-  .menu {
-    flex: 5;
   }
   
   .horizontal {
@@ -61,7 +57,7 @@ $nav-text-color: #DDDDDD;
     cursor: pointer;
   }
 
-  .fa-magnifying-glass, .fa-bell {
+ .fa-bell {
     color: #919599
   }
 
@@ -100,3 +96,9 @@ $nav-text-color: #DDDDDD;
   .v-input {
     max-width: 200px !important;
   }
+
+  
+  .fa-download, .fa-calendar {
+    color: #17AD49;
+}
+  

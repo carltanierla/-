@@ -4,6 +4,9 @@
         <v-menu v-model="isMenuOpen" :close-on-content-click="false">
             <template v-slot:activator="{ props }">
                 <v-text-field
+                    :readonly=true
+                    hide-details
+                    class="date-input"
                     :label="label"
                     :model-value="formattedDate"
                     v-bind="props"
@@ -11,36 +14,57 @@
                     append-inner-icon="mdi-calendar-account"
                 ></v-text-field>
             </template>
-            <v-date-picker v-model="selectedDate" :color="color"></v-date-picker>
+            <v-date-picker v-model="oSelectedDate" :color="color" :min="getMinEndDate"></v-date-picker>
         </v-menu>
       </v-container>
     </v-app>
   </template>
   
   <script>
+    import moment from 'moment';
     export default {
         props: {
             label: String,
             color: String,
-            modelValue: Date
+            modelValue: Date,
+            type: String,
+            min: Date
         },
 
         data() {
             return {
                 isMenuOpen: false,
-                selectedDate: this.modelValue,
+                oSelectedDate: this.modelValue,
+                sMinEndDate: null,
             }
         },
 
         computed: {
+            /**
+             * Format Date to string
+             */
             formattedDate() {
-                return this.selectedDate ? this.selectedDate.toLocaleDateString("en") : "";
+                return this.oSelectedDate ? this.oSelectedDate.toLocaleDateString("en") : "";
+            },
+            
+            /**
+             * Get minimum end date based on the selected start date
+             */
+            getMinEndDate() {
+                if (this.type === 'endDate') {
+                    return moment(this.min).format('YYYY-MM-DD');
+                }
+
+                return null;
             }
         },
-
         watch: {
-            selectedDate() {
-                this.$emit('changeDate', this.formattedDate);
+            /**
+             * Watch for selectedDate changes
+             * emits change event
+             */
+            oSelectedDate() {
+                this.$emit('changeDate', this.oSelectedDate);
             }
         }
     }
@@ -66,4 +90,7 @@
         padding: 0 16px !important;
     }
 
+    .v-field__input {
+        text-align: left;
+    }
 </style>

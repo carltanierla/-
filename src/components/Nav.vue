@@ -3,34 +3,33 @@
         <Logo/>
         <div class="menu">
             <ul class="horizontal">
-                <li><a href="/#">My Request</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
-                <li><a href="/#">My Team</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a >My Request</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a >My Team</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
                 <span class="dropdown">
                     <li><a class="dropbtn" @click="toggleDropdown" href="/#">Administration Tools</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="#">Manage Attendance</a>
-                    </div>
-             
+                    <router-link style="text-decoration: none; color: inherit" to="/attendance-management">
+                        <div class="dropdown-content" id="myDropdown">
+                            <a>Manage Attendance</a>
+                        </div>
+                    </router-link>
                 </span>
-                <li><a href="/#">Maintenance</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
-                <li><a href="/#">Company</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a>Maintenance</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a>Company</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
             </ul>
         </div>
-        <div class="right-nav d-flex p-2 justify-content-center">
-            <div class="search-field">
+        <div class="right-nav d-flex justify-content-between">
                 <v-text-field
-                class="search-input"
-                placeholder="employee Search"
-                variant="underlined"
-                ></v-text-field>
-            </div>
-            <div class="search-btn mx-5 align-self-center">
-                <font-awesome-icon icon="fa-solid fa-magnifying-glass" size="xl" />
-            </div>
-            <div class="notification mx-5 align-self-center">
+                    single-line
+                    hide-details
+                    class="search-txt"
+                    placeholder="Search Employee"
+                    variant="outlined"
+                    append-inner-icon="mdi-magnify"
+                    color="light"></v-text-field>
+            <div class="notification d-flex justify-content-end">
                 <font-awesome-icon icon="fa-regular fa-bell" size="xl" />
             </div>
-            <div class="profile d-flex">
+            <div class="profile d-flex ml-5">
                 <div class="avatar align-self-center">
                     <v-avatar size="36px">
                         <v-img
@@ -57,15 +56,15 @@
         },
         methods: {
             toggleDropdown() {
-                let myDropdown = document.getElementById("myDropdown");
-                myDropdown.classList.toggle("show");
+                let myDropdown = document.getElementById('myDropdown');
+                myDropdown.classList.toggle('show');
             }
         },
     
         mounted() {
             document.addEventListener('click', (e) => {
                 if (!e.target.matches('.dropbtn')) {
-                    var myDropdown = document.getElementById("myDropdown");
+                    var myDropdown = document.getElementById('myDropdown');
                     if (myDropdown.classList.contains('show')) {
                         myDropdown.classList.remove('show');
                     }
@@ -97,11 +96,28 @@
   text-align: left;
 }
 
+.v-text-field {
+    color: #ffffff;
+}
+
+.fa-magnifying-glass {
+    color: #919599
+}
+
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-.show {
-  display: block;
+.notification {
+    flex: 5;
 }
+
+.v-field__append-inner, .mdi-magnify {
+    cursor: pointer !important;
+}
+
+.show {
+    display: block;
+}
+
 </style>
