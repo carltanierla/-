@@ -51,7 +51,7 @@
             </div>
             <div class="mt-2">
                 <v-select
-                    v-model="iLocationID"
+                    v-model="iSelectedLocationID"
                     label="Location"
                     :items="aLocations" 
                     :item-props="oLocationProps"
@@ -110,12 +110,12 @@ export default {
         },
 
         /**
-        //  * Watch for iSelectedLocationID changes
-        //  * @param {object} oValue 
-        //  */
-        //  iSelectedLocationID(oValue) {
-        //         this.aLocations = constant.LOCATIONS.filter(oData => oData.department_id === oValue.id);
-        // },
+         * Watch for iSelectedLocationID changes
+         * @param {object} oValue 
+         */
+         iSelectedLocationID(oValue) {
+                this.aLocations = constant.LOCATIONS.filter(oData => oData.department_id === oValue.id);
+        },
 
         
     },

@@ -101,7 +101,8 @@
              * check current selected attendance log subcategory
              */
             bCheckIfAttendanceLogActive() {
-                return this.$route.path === '/sprout-hris/attendance-logs';
+                console.log(this.$route.path);
+                return this.$route.path === '/sprout-hris/attendance-logs' || this.$route.path === '/sprout-hris' || this.$route.path === '/sprout-hris/';
             }
         },
 

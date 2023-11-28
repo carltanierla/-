@@ -34,7 +34,7 @@
                     <v-avatar size="36px">
                         <v-img
                         alt="Avatar"
-                        src="/blank-profile-picture-973460_1280.png"
+                        src="/sprout-hris/blank-profile-picture-973460_1280.png"
                         >
                         </v-img>
                     </v-avatar>

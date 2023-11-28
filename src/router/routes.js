@@ -13,10 +13,13 @@ const router = createRouter({
         {
             path: '/sprout-hris',
             component: ManageAttendancePage,
+            alias: ['/sprout-hris/'],
+            sensitive: false,
             children: [
               {
                 path: 'attendance-logs',
                 component: AttendanceLogs,
+                alias: ['/sprout-hris/', '/sprout-hris', '/sprout-hris/attendance-logs', '/sprout-hris/attendance-logs/'],
               },
               {
                 path: 'exported-files',
