@@ -8,10 +8,10 @@
                 </p>
             </div>
             <div class="subpage-button-container">
-                <router-link style="text-decoration: none; color: inherit" to="/attendance-management/attendance-logs">
+                <router-link style="text-decoration: none; color: inherit" to="/sprout-hris/attendance-logs">
                     <ButtonSubPage :class="['attendance-logs', { 'selected' : bCheckIfAttendanceLogActive }]" name="Attendance Logs" iconPack="fa-solid fa-calendar" />
                 </router-link>
-                <router-link style="text-decoration: none; color: inherit" to="/attendance-management/exported-files">
+                <router-link style="text-decoration: none; color: inherit" to="/sprout-hris/exported-files">
                     <ButtonSubPage :class="['exported-files', { 'selected' : !bCheckIfAttendanceLogActive }]" name="Exported Files" iconPack="fa-solid fa-download" />
                 </router-link>
             </div>
