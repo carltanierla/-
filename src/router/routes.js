@@ -11,7 +11,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/attendance-management',
+            path: '/',
             component: ManageAttendancePage,
             children: [
               {

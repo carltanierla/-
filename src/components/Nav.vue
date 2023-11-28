@@ -3,18 +3,18 @@
         <Logo/>
         <div class="menu">
             <ul class="horizontal">
-                <li><a >My Request</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
-                <li><a >My Team</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a @click.stop>My Request</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a @click.stop>My Team</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
                 <span class="dropdown">
-                    <li><a class="dropbtn" @click="toggleDropdown" href="/#">Administration Tools</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                    <li><a class="dropbtn" @click.stop="toggleDropdown">Administration Tools</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
                     <router-link style="text-decoration: none; color: inherit" to="/attendance-management">
                         <div class="dropdown-content" id="myDropdown">
-                            <a>Manage Attendance</a>
+                            <a @click.stop>Manage Attendance</a>
                         </div>
                     </router-link>
                 </span>
-                <li><a>Maintenance</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
-                <li><a>Company</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a @click.stop>Maintenance</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
+                <li><a @click.stop>Company</a><font-awesome-icon icon="fa-solid fa-caret-down" /></li>
             </ul>
         </div>
         <div class="right-nav d-flex justify-content-between">
