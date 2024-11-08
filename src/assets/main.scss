@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
 
 $nav-text-color: #DDDDDD;
 
@@ -13,9 +14,34 @@ $nav-text-color: #DDDDDD;
     background-color: #333333;
   }
 
-  #logo { 
-    flex: 1.5;
-    align-self: center;
+  #logo a {
+    text-decoration: none;
+  }
+
+  #logo a > h1{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 4rem;
+    font-style: normal;
+  }
+  
+  #logo a > h6 { 
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    color: #DDDDDD;
+    font-size: small;
+  }
+
+  .h-text {
+    color: #17AD49;
+  }
+
+  .r-text {
+    color: $nav-text-color;
   }
   
   #nav ul {
@@ -39,9 +65,19 @@ $nav-text-color: #DDDDDD;
     padding: 1rem 0;
     text-decoration: none;
   }
+
+  .menu {
+    margin-left: 5rem;
+    align-items: center;
+  }
   
   .horizontal {
     display: flex;
+    height: 100%;
+  }
+
+  .dropdown {
+    margin-top: 0.75rem;
   }
 
   .logo {

@@ -16,7 +16,7 @@ export default {
              */
             items: [
                 {
-                    'name'  : 'Aguas Ivy',
+                    'name'  : 'John Doe',
                     'Date'  : '03/16/2022',
                     'time'  : '01:34PM',
                     'IN/OUT': 'IN',

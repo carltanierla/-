@@ -8,7 +8,7 @@
         <div class="filter-labels" v-if="!bActiveFilters">
             <div class="d-flex mt-3"> 
                 <font-awesome-icon icon="fa-regular fa-building" />
-                <p class="company-name ml-3">SPROUT SOLUTIONS</p>
+                <p class="company-name ml-3">SAMPLE COMPANY</p>
             </div>
             <div class="d-flex"> 
                 <font-awesome-icon icon="fa-solid fa-users" />

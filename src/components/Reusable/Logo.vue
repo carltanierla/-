@@ -3,9 +3,10 @@
 </script>
 
 <template>
-    <div id="logo" class="mx-7 my-3">
+    <div id="logo" class="mx-10 my-1">
         <a href="https://vuejs.org/" target="_blank">
-        <img src="../../assets/sprout.svg" class="logo vue" alt="Vue logo" />
+            <h1><span class="h-text">H</span><span class="r-text">R</span></h1>
+            <h6>Information System</h6>
         </a>
     </div>
 </template>
